@@ -1,0 +1,144 @@
+
+
+Course: COMP30023
+Author: Johnson Tong
+Link:   https://edstem.org/au/courses/15616/discussion/1901753?comment=3D42=
+97858
+
+
+
+Some code to connect to an IMAP server and read connection startup greeting=
+:
+
+
+
+
+
+#define _POSIX_C_SOURCE 200112L
+
+#include <netdb.h>
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <string.h>
+
+#include <unistd.h>
+
+
+
+int main(int argc, char** argv) {
+
+    int sockfd, n, s;
+
+    struct addrinfo hints, *servinfo, *rp;
+
+    char buffer[256];
+
+
+
+    // Create address
+
+    memset(&hints, 0, sizeof hints);
+
+    hints.ai_family =3D AF_INET;
+
+    hints.ai_socktype =3D SOCK_STREAM;
+
+
+
+    // Get addrinfo of server. From man page:
+
+    // The getaddrinfo() function combines the functionality provided by th=
+e
+
+    // gethostbyname(3) and getservbyname(3) functions into a single interf=
+ace
+
+    s =3D getaddrinfo("localhost", "143", &hints, &servinfo);
+
+    if (s !=3D 0) {
+
+        fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(s));
+
+        exit(EXIT_FAILURE);
+
+    }
+
+
+
+    // Connect to first valid result
+
+    // Why are there multiple results? see man page (search 'several reason=
+s')
+
+    // How to search? enter /, then text to search for, press n/N to naviga=
+te
+
+    for (rp =3D servinfo; rp !=3D NULL; rp =3D rp->ai_next) {
+
+        sockfd =3D socket(rp->ai_family, rp->ai_socktype, rp->ai_protocol);
+
+        if (sockfd =3D=3D -1)
+
+            continue;
+
+
+
+        if (connect(sockfd, rp->ai_addr, rp->ai_addrlen) !=3D -1)
+
+            break; // success
+
+
+
+        close(sockfd);
+
+    }
+
+    if (rp =3D=3D NULL) {
+
+        fprintf(stderr, "client: failed to connect\n");
+
+        exit(EXIT_FAILURE);
+
+    }
+
+    freeaddrinfo(servinfo);
+
+
+
+    // Read message from server
+
+    n =3D read(sockfd, buffer, 255);
+
+    if (n < 0) {
+
+        perror("read");
+
+        exit(EXIT_FAILURE);
+
+    }
+
+    // Null-terminate string
+
+    buffer[n] =3D '\0';
+
+    printf("%s\n", buffer);
+
+
+
+    close(sockfd);
+
+    return 0;
+
+}
+
+
+
+
+
+
+Edit your email preferences at https://edstem.org/au/email-preferences?toke=
+n=3DN82X8JRcsDFDu4wW9O0qZCIta2KoOrREyiGTBr_-n-gO9BK48c40oDjEmelZJPtN7szVqA3=
+OsJPUwwcEeL6gnuJuUy5C-is6CFSRj-GImsLGRmAbLRSFsk1rq-SKWD4-yvVJhO9OKGNcsbRI

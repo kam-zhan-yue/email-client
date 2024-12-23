@@ -1,0 +1,369 @@
+Return-Path: <0108018f083216e3-d77806e0-6753-4246-89d1-47c82014d9f1-000000@ap-southeast-2.amazonses.com>
+Delivered-To: staff@comp30023
+Received: by comp30023 (Postfix, from userid 1000)
+	id 557C660BF4; Mon, 22 Apr 2024 23:44:17 +0000 (UTC)
+Authentication-Results: comp30023;
+	dkim=pass (2048-bit key; secure) header.d=instructure.com header.i=@instructure.com header.a=rsa-sha256 header.s=py5iqjrdvdgjpzha3sv64mxf4n7vyfio header.b=Hi1xokFd;
+	dkim=pass (1024-bit key; secure) header.d=amazonses.com header.i=@amazonses.com header.a=rsa-sha256 header.s=c4g6esh62r66f7jpbbidkgju554h65ib header.b=kCeu15jK
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on comp30023
+X-Spam-Level:
+X-Spam-Status: No, score=-0.1 required=5.0 tests=DKIMWL_WL_MED,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,
+	RCVD_IN_ZEN_BLOCKED,URIBL_DBL_BLOCKED,URIBL_ZEN_BLOCKED
+	autolearn=unavailable autolearn_force=no version=3.4.6
+Received: from b235-186.smtp-out.ap-southeast-2.amazonses.com (b235-186.smtp-out.ap-southeast-2.amazonses.com [69.169.235.186])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by comp30023 (Postfix) with ESMTPS id 23BBF6002B
+	for <staff@comp30023>; Mon, 22 Apr 2024 23:44:13 +0000 (UTC)
+Authentication-Results: mail.comp30023; dmarc=fail (p=quarantine dis=none) header.from=instructure.com
+Authentication-Results: mail.comp30023; spf=pass smtp.mailfrom=ap-southeast-2.amazonses.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=py5iqjrdvdgjpzha3sv64mxf4n7vyfio; d=instructure.com;
+	t=1713829451;
+	h=Date:From:Reply-To:To:Message-ID:Subject:Mime-Version:Content-Type:Content-Transfer-Encoding;
+	bh=ynZo3yhQmf/sRgiS0cOW83lYeDMA1ZRDKbWp13BbvoU=;
+	b=Hi1xokFdGAmVJnPS1KEdMgBr1O6CfhUnPIqZ/WZa/FaDyprytSiPLJuW/DZRSvOP
+	zEVekAIQ0FZX6ZqO9abn22q0aFJX6QDwL/KZjq8Zr1YtENUlQ7t4Xdtc2QYWMnbqWYh
+	6LPmYbs1ithmSzhYw4DCIc8Ino/Z6/T5zPnYiRwkm+IYBWOlOO3hM6e6Tk84eeVCfF0
+	wncQlpQkednqx1MOagJ4lbrUhnuUiXtCt61Z1K833T3T3tZKQWC+Qv2LVF2zi7IINjx
+	u4o1QDv42MJyg7mkvW+OxzVF+Xw8VWUfODNRFBfYIrZs3lefMS/EUKCUW9Q6K+vu5dD
+	sziHhq8WuQ==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=c4g6esh62r66f7jpbbidkgju554h65ib; d=amazonses.com; t=1713829451;
+	h=Date:From:Reply-To:To:Message-ID:Subject:Mime-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=ynZo3yhQmf/sRgiS0cOW83lYeDMA1ZRDKbWp13BbvoU=;
+	b=kCeu15jK/y7VAOYcHzRVRn3Kjt1FpyYzOW/ffl4ayQAQm79QClMVNXsayhgXYFcy
+	kKD/iqGf7MI7TpbHKh1Z6LJ0ZqEu3Jf5egrG0IzGynpJYg8wEHrGcxcuq34EZK7ZQq4
+	rPOaEKex70NTOCoKPPvoXJTtzIZoLjBmr9Lb56Vo=
+X-On-bounce-route-to: notification-service-failures-syd-prod
+Date: Mon, 22 Apr 2024 23:44:11 +0000
+From: "Computer Systems (COMP30023_2024_SM1)" <notifications@instructure.com>
+To: staff@comp30023
+Message-ID: <0108018f083216e3-d77806e0-6753-4246-89d1-47c82014d9f1-000000@ap-southeast-2.amazonses.com>
+Subject: MST Results, Viewing Sessions, and Remark Requests: Computer Systems
+ (COMP30023_2024_SM1)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6626f64b5ee67_2ddfc4b1492049";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Auto-Submitted: auto-generated
+Feedback-ID: 1.ap-southeast-2.6IDSr0/hi0Dlg0gTVpLVEF3mPd02f/mjnjpULyyGkN8=:AmazonSES
+X-SES-Outgoing: 2024.04.22-69.169.235.186
+
+
+----==_mimepart_6626f64b5ee67_2ddfc4b1492049
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear all,
+
+The marks for the MST have been released. They are available under the [M=
+ST Assignment] (https://canvas.lms.unimelb.edu.au/courses/182742/assignme=
+nts/474868). The marks for each question are detailed in a comment in the=
+ assignment.
+
+Please note that question 15 refers to the overflow answer box. It is jus=
+t a placeholder and has no marks allocated to it. If you used the overflo=
+w box, the marks for your answers are reflected in the corresponding ques=
+tion (not the overflow box).
+
+Below are some important details on sample solutions, remark requests, an=
+d viewing sessions.
+
+MST Consultation Hour
+---------------------
+
+I will hold a Zoom consultation hour on Friday 26/04, 12:00pm -1:00pm. Du=
+ring the session, I will present sample solutions for each of the questio=
+ns and a high-level overview of the marking criteria.
+
+I anticipate this session to be helpful in the following ways:
+
+* Help you review the concepts covered in the MST
+
+* Allow you to understand the marks you received for the short-answer que=
+stions
+
+* Provide some useful strategies when approaching questions in an exam se=
+tting
+
+* Help you prepare for the final exam
+
+Meeting details
+
+* Zoom link: [https://unimelb.zoom.us/j/83679607466?pwd=3DNDhNaTMxSEU5WkE=
+xUlV2RzYybTZoZz09&from=3Daddon] (https://unimelb.zoom.us/j/83679607466?pw=
+d=3DNDhNaTMxSEU5WkExUlV2RzYybTZoZz09&from=3Daddon)
+
+* For those of you who cannot attend, the meeting will be recorded and po=
+sted on Canvas
+
+Requests to Remark
+------------------
+
+If, after attending (or watching the recording of) the MST consultation s=
+ession, you believe a mistake was made in marking your test, you can subm=
+it a request to remark.
+
+A form to request remarks will be available in the MST module after the M=
+ST consultation hour.
+
+Once you submit the request, all the short-answer questions in the MST wi=
+ll be remarked by a different examiner. Please note that this might resul=
+t in a final MST mark that is higher or lower than the original one. The =
+new mark will be final.
+
+The deadline to submit a remark request is Friday 03/05 at 11:59pm. =C2=A0=
+
+
+Viewing Sessions
+----------------
+
+If you would like to view your test and review your own answers, then you=
+ can register for ([registration form] (https://forms.office.com/r/EuWKWC=
+aQDa)) and attend one of the following MST viewing sessions:
+
+Session 1
+Date: Monday 29/04 12:00pm - 1:00pm
+Location: Melbourne Connect, Level 2, Room 2206 (Mildura Room)
+
+Session 2
+Date: Tuesday 30/04 11:00am - 12:00pm
+Location: Melbourne Connect, Level 4, Room 4206 (Edinburgh Room)
+
+You can attend the session you have registered for at any time between th=
+e stipulated time frame. Please note that we require you to register so t=
+hat we can have your test available during the session.
+
+Marks will NOT be reviewed during these sessions. The viewing sessions ar=
+e solely intended for you to review your own answers. For solutions and a=
+n overview of the marking criteria, please attend the MST consultation se=
+ssion. If you think an error has been made while marking your test, pleas=
+e submit a request remark form.
+
+All the best,
+
+Maria
+
+=C2=A0
+
+
+https://canvas.lms.unimelb.edu.au/courses/182742/announcements/1162911
+
+
+
+
+
+
+________________________________________
+
+You received this email because you are participating in one or more clas=
+ses using Canvas.  To change or turn off email notifications, visit: =
+
+https://canvas.lms.unimelb.edu.au/profile/communication
+
+
+----==_mimepart_6626f64b5ee67_2ddfc4b1492049
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html dir=3D"ltr" lang=3D"en-AU-x-unimelb">
+<head>
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+  <style type=3D"text/css">
+/*
+Changes to font size (14->16) for smaller screens
+table[class=3Dbody] is the only selector that works for all vendors
+*/
+@media only screen and (max-width: 620px) {
+  table[class=3Dbody] p,
+  table[class=3Dbody] ul,
+  table[class=3Dbody] ol,
+  table[class=3Dbody] td,
+  table[class=3Dbody] span,
+  table[class=3Dbody] a {
+    font-size: 16px !important;
+  }
+  /* remove padding for mobile so no gray shows */
+  table[class=3Dbody] .bodycell {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  /* reduce padding from 20->10 for mobile */
+  table[class=3Dbody] .maincell {
+    padding: 10px !important;
+  }
+}
+/*
+ExternalClass fixes Outlook.com / Hotmail emails
+*/
+@media all {
+  .ExternalClass {
+    width: 100%;
+  }
+  .ExternalClass,
+  .ExternalClass p,
+  .ExternalClass span,
+  .ExternalClass font,
+  .ExternalClass td,
+  .ExternalClass div {
+    line-height: 100%;
+  }
+}
+  </style>
+</head>
+<!--
+background: white (could be gray)
+default sans serif fonts, 14px, 1.3, #444444
+vendor prefixes for Outlook (-ms) and iOS (-webkit)
+Margin is capitalized to fix Outlook.com
+-->
+<body class=3D"" style=3D"background-color:#ffffff; font-family:'Open San=
+s', 'Lucida Grande', 'Segoe UI', Arial, Verdana, 'Lucida Sans Unicode', T=
+ahoma, 'Sans Serif'; font-size:14px; color: #444444; line-height:1.3; Mar=
+gin:0; padding:0; -ms-text-size-adjust:100%; -webkit-font-smoothing:antia=
+liased; -webkit-text-size-adjust:100%;">
+
+  <!-- body: background table (if body has a color, this should match) --=
+>
+  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"body" =
+style=3D"border-collapse:separate; background-color:#ffffff; width:100%; =
+box-sizing:border-box; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+    <tr>
+      <!-- width and max-width so it can scale for mobile -->
+      <td class=3D"bodycell" style=3D"max-width:600px; width:100%; font-f=
+amily:'Open Sans', 'Lucida Grande', 'Segoe UI', Arial, Verdana, 'Lucida S=
+ans Unicode', Tahoma, 'Sans Serif'; font-size:14px; vertical-align:top; d=
+isplay:block; box-sizing:border-box; padding:10px; Margin:0 auto !importa=
+nt;">
+
+<!-- for older versions of Outlook that don't support max-width -->
+<!--[if (gte mso 9)|(IE)]>
+<table width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0"><tr><td>
+<![endif]-->
+
+        <!-- main: white box for content -->
+        <table class=3D"main" style=3D"background:#fff; width:100%; borde=
+r-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt; ">
+          <tr>
+            <td class=3D"maincell" style=3D"font-family:sans-serif; font-=
+size:14px; vertical-align:top; box-sizing:border-box; padding:20px;">
+
+                    =
+
+<p>Dear all,</p><p>The marks for the MST have been released. They are ava=
+ilable under the <a href=3D"https://canvas.lms.unimelb.edu.au/courses/182=
+742/assignments/474868">MST Assignment</a>. The marks for each question a=
+re detailed in a comment in the assignment.</p><p>Please note that questi=
+on 15 refers to the overflow answer box. It is just a placeholder and has=
+ no marks allocated to it. If you used the overflow box, the marks for yo=
+ur answers are reflected in the corresponding question (not the overflow =
+box).</p><p>Below are some important details on sample solutions, remark =
+requests, and viewing sessions.</p> MST Consultation Hour <p>I will hold =
+a Zoom consultation hour on <strong>Friday 26/04, 12:00pm -1:00pm</strong=
+>. During the session, I will <strong>present sample solutions for each o=
+f the questions</strong> and a high-level overview of the marking criteri=
+a.</p><p>I anticipate this session to be helpful in the following ways:</=
+p><ol><li>Help you review the concepts covered in the MST</li><li>Allow y=
+ou to understand the marks you received for the short-answer questions</l=
+i><li>Provide some useful strategies when approaching questions in an exa=
+m setting</li><li>Help you prepare for the final exam</li></ol><p><span><=
+strong>Meeting details</strong></span></p><ul><li>Zoom link: <a href=3D"h=
+ttps://unimelb.zoom.us/j/83679607466?pwd=3DNDhNaTMxSEU5WkExUlV2RzYybTZoZz=
+09&amp;from=3Daddon">https://unimelb.zoom.us/j/83679607466?pwd=3DNDhNaTMx=
+SEU5WkExUlV2RzYybTZoZz09&amp;from=3Daddon</a></li><li>For those of you wh=
+o cannot attend, <strong>the meeting will be recorded and posted on Canva=
+s</strong><strong></strong></li></ul> Requests to Remark <p>If, <strong>a=
+fter attending (or watching the recording of) the MST consultation</stron=
+g> session, you believe a mistake was made in marking your test, you can =
+submit a request to remark.</p><p>A form to request remarks will be avail=
+able in the <strong>MST module after the MST consultation hour. </strong>=
+</p><p>Once you submit the request,<strong> </strong>all the short-answer=
+ questions in the MST will be remarked by a different examiner. Please no=
+te that <strong>this might result in a final MST mark that is higher or l=
+ower</strong> than the original one. The <strong>new mark will be final</=
+strong>.</p><p>The <strong>deadline</strong> to submit a remark request i=
+s <strong>Friday 03/05 at</strong> <strong>11:59pm. &nbsp;</strong><stron=
+g></strong></p> Viewing Sessions <p>If you would like to view your test a=
+nd review your own answers, then you can register for (<a href=3D"https:/=
+/forms.office.com/r/EuWKWCaQDa">registration form</a>) and attend one of =
+the following MST viewing sessions:</p><p><strong>Session 1</strong><br>D=
+ate: Monday 29/04 12:00pm - 1:00pm<br>Location: Melbourne Connect, Level =
+2, Room 2206 (Mildura Room) <br><br><strong>Session 2</strong><br>Date: T=
+uesday 30/04 11:00am - 12:00pm<br>Location: Melbourne Connect, Level 4, R=
+oom 4206 (Edinburgh Room)</p><p>You can attend the session you have regis=
+tered for at any time between the stipulated time frame. Please note that=
+ we require you to register so that we can have your test available durin=
+g the session.</p><p><strong>Marks will NOT be reviewed during these sess=
+ions</strong>. The viewing sessions are solely intended for you to review=
+ your own answers. For solutions and an overview of the marking criteria,=
+ please attend the MST consultation session. If you think an error has be=
+en made while marking your test, please submit a request remark form.</p>=
+<p>All the best,</p><p>Maria</p><p>&nbsp;</p>
+
+
+
+
+            </td>
+          </tr>
+        </table>
+        <!-- /.main -->
+
+        <!-- logo: branding -->
+        <table class=3D"logo" style=3D"width:100%; box-sizing:border-box;=
+ border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt; ">=
+
+          <tr>
+            <td class=3D"logocell" style=3D"text-align:center; vertical-a=
+lign:top; box-sizing:border-box; padding:10px;">
+              <img src=3D"https://du11hjcvx0uqb.cloudfront.net/dist/image=
+s/email_signature-d2c5880612.png" alt=3D"">
+            </td>
+          </tr>
+        </table>
+        <!-- /.logo -->
+
+        <!-- footer: gray text below main -->
+        <table class=3D"footer" style=3D"width:100%; box-sizing:border-bo=
+x; border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt; =
+">
+          <tr>
+            <td class=3D"footercell" style=3D"font-family:sans-serif; fon=
+t-size:14px; vertical-align:top; color:#a8b9c6; font-size:12px; text-alig=
+n:center; padding:10px; box-sizing:border-box; ">
+
+                <a href=3D"https://canvas.lms.unimelb.edu.au/courses/1827=
+42/announcements/1162911">
+    View announcement
+  </a> &nbsp;|&nbsp;
+
+                <a href=3D"https://canvas.lms.unimelb.edu.au/profile/comm=
+unication" style=3D"white-space: nowrap;">Update your notification settin=
+gs</a>
+
+            </td>
+          </tr>
+        </table>
+        <!-- /.footer -->
+
+<!--[if (gte mso 9)|(IE)]>
+</td></tr></table>
+<![endif]-->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /.body -->
+
+</body>
+</html>
+
+----==_mimepart_6626f64b5ee67_2ddfc4b1492049--
